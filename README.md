@@ -1,7 +1,11 @@
-## Реализация throttleFirst и throttleLast для Flow
+## Практика RxJava
 
-**`throttleFirst`** выглядит подозрительно простой. Возможно, что-то не учла при реализации.
+Все походы на "сервер" (задания 1,3,5) - [Request.kt](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/utils/Request.kt) в пакете utils (модуль rx_example).
 
-**`lateThrottleLast`** - первая версия аналога `throttleLast`, в ходе реализации выяснила, что эмитит нужное значение не в своем проходе коллектора, а в следующем. Тем не менее, задачу выполняет, решила оставить.
+Адаптер для ресайклера - [тут](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/SimpleStringsAdapter.kt)
 
-**`throttleLast`** улучшенная версия `lateThrottleLast`, нужное значение эмитит в текущем проходе коллектора, а не в следующем. Этим и отличается от `lateThrottleLast`
+1) [Сетевой запрос](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/RecyclerFragment.kt) - объединен с третьим заданием
+2) [Таймер](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/TimerFragment.kt)
+3) [Ресайклер с выводом позиции элемента в toast (publish subject)](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/RecyclerFragment.kt)
+4) [вывод из EditText не ранее трех секунд](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/EditTextFragment.kt)
+5) [Zip списков кредитных кард с ошибкой и без](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/CreditCardFragment.kt)
