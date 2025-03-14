@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/toRecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ресайклер отображает данные"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/toTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Таймер"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/toEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Поле ввода"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/toCards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Кредитные карты" />
+</LinearLayout>

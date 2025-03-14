@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "KotlinEM"
 include(":app")
- 
+include(":rx_example")
+include(":coroutines_example")
+include(":kotlin_example")
+include(":core")
