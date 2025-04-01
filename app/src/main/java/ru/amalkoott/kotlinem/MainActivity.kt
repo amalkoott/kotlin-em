@@ -1,64 +1,43 @@
 package ru.amalkoott.kotlinem
 
+import NotificationUtils
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import ru.amalkoott.rx_example.RxExampleFragment
+import androidx.fragment.app.Fragment
+import ru.amalkoott.android_example.presentation.AndroidExampleFragment
+import ru.amalkoott.core.worker.setChargeNotify
+import ru.amalkoott.core.navigation.ActivityCloser
+import ru.amalkoott.core.navigation.Navigator
+import ru.amalkoott.core.navigation.Router
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Navigator, ActivityCloser {
+    private val router = Router(supportFragmentManager, R.id.fragment_container, this)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val fragmentManager = supportFragmentManager
+        NotificationUtils.createNotificationChannel(applicationContext)
+        navigateTo(AndroidExampleFragment(), false)
 
-        val transaction = fragmentManager.beginTransaction()
-        transaction.add(R.id.fragment_container, RxExampleFragment(), "FirstFragmentTag")
-
-        transaction.addToBackStack(null)
-        transaction.commit()
-        /*
-        setContent {
-            KotlinEMTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    App(
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
-        */
+        setChargeNotify(applicationContext)
     }
-}
 
-@Composable
-fun App(
-    modifier: Modifier
-){
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center,
-        modifier = modifier.fillMaxSize()
+    override fun close() {
+        finish()
+    }
+
+    override fun navigateTo(
+        fragment: Fragment,
+        addToBackStack: Boolean,
+        tag: String?
     ) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center,
-            modifier = modifier.fillMaxWidth()
-        ) {
-            //KotlinExample().draw()
+        router.navigateTo(fragment,addToBackStack,tag)
+    }
 
-            //CoroutinesExample().draw()
-
-        }
+    override fun goBack() {
+        router.goBack()
     }
 }
 
