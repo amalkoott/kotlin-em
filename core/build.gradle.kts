@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "ru.amalkoott.example"
+    namespace = "ru.amalkoott.core"
     compileSdk = 34
 
     defaultConfig {
@@ -38,6 +38,9 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.runtime.android)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.activity)
+    implementation(libs.androidx.work.runtime.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
