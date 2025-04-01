@@ -1,4 +1,4 @@
-package ru.amalkoott.example.utils
+package ru.amalkoott.core.utils
 
 object Constant {
     const val KOTLIN_TASK = "KOTLIN_TASK"

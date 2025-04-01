@@ -5,7 +5,6 @@ import android.widget.Toast
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -15,9 +14,9 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
-import ru.amalkoott.example.Example
-import ru.amalkoott.example.utils.throttleFirst
-import ru.amalkoott.example.utils.throttleLast
+import ru.amalkoott.core.Example
+import ru.amalkoott.core.utils.throttleFirst
+import ru.amalkoott.core.utils.throttleLast
 
 class CoroutinesExample : Example {
 

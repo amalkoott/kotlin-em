@@ -1,4 +1,4 @@
-package ru.amalkoott.example.utils
+package ru.amalkoott.core.utils
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

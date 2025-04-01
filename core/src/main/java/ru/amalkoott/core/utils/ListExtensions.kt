@@ -1,4 +1,4 @@
-package ru.amalkoott.example.utils
+package ru.amalkoott.core.utils
 
 fun List<Any>.findInt(): List<Int> = buildList{
     for(item in this@findInt){

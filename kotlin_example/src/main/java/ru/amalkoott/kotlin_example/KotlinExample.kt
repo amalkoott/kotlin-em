@@ -1,7 +1,6 @@
 package ru.amalkoott.kotlin_example
 
 import android.content.Context
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.Button
@@ -11,7 +10,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.ComposeView
 
-class KotlinExample : ru.amalkoott.example.Example {
+class KotlinExample : ru.amalkoott.core.Example {
    // @Composable
     override fun draw(context: Context) {
         ComposeView(context).setContent {

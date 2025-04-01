@@ -1,4 +1,4 @@
-package ru.amalkoott.example.utils
+package ru.amalkoott.core.utils
 
 import android.content.Context
 import android.util.Log
@@ -6,10 +6,10 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import ru.amalkoott.example.utils.Constant.CACHE_PREFS
-import ru.amalkoott.example.utils.Constant.KOTLIN_TASK
-import ru.amalkoott.example.utils.Constant.LAUNCH_TIME_KEY
-import ru.amalkoott.example.utils.Constant.LAUNCH_TIME_LOG_PATTERN
+import ru.amalkoott.core.utils.Constant.CACHE_PREFS
+import ru.amalkoott.core.utils.Constant.KOTLIN_TASK
+import ru.amalkoott.core.utils.Constant.LAUNCH_TIME_KEY
+import ru.amalkoott.core.utils.Constant.LAUNCH_TIME_LOG_PATTERN
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter

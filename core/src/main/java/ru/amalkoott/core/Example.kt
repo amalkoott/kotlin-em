@@ -1,4 +1,4 @@
-package ru.amalkoott.example
+package ru.amalkoott.core
 
 import android.content.Context
 

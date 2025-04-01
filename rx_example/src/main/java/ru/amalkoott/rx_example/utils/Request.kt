@@ -1,8 +1,13 @@
 package ru.amalkoott.rx_example.utils
 
+import io.reactivex.rxjava3.core.Maybe
+import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
+import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import java.io.IOException
+import java.sql.Time
+import java.util.concurrent.TimeUnit
 import kotlin.random.Random
 
 typealias RequestResult = List<String>
@@ -45,3 +50,9 @@ fun fromErrorServer() : Single<RequestResult>{
     }
 }
 
+fun getReduceData() : Observable<Long>{
+    return Observable.interval(1000,TimeUnit.MILLISECONDS)
+        .scan{
+            a, b -> a + b
+        }
+}

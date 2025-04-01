@@ -6,11 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import io.reactivex.rxjava3.disposables.CompositeDisposable
 import ru.amalkoott.rx_example.databinding.FragmentRxExampleBinding
+import ru.amalkoott.rx_example.examples.main
 import ru.amalkoott.rx_example.presentation.CreditCardFragment
 import ru.amalkoott.rx_example.presentation.EditTextFragment
 import ru.amalkoott.rx_example.presentation.RecyclerFragment
 import ru.amalkoott.rx_example.presentation.TimerFragment
+import ru.amalkoott.rx_example.utils.getReduceData
 
 internal val TAG = RxExampleFragment::class.java.simpleName
 
@@ -28,6 +31,8 @@ class RxExampleFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        main()
 
         with(binding){
             toRecycler.setOnClickListener { replaceFragment(RecyclerFragment()) }

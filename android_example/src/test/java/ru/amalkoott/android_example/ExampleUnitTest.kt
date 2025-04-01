@@ -1,4 +1,4 @@
-package ru.amalkoott.example
+package ru.amalkoott.android_example
 
 import org.junit.Test
 

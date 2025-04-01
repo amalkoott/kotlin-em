@@ -3,6 +3,8 @@ package ru.amalkoott.rx_example.examples.coldstream
 import android.util.Log
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.ObservableEmitter
+import io.reactivex.rxjava3.core.Observer
+import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 import ru.amalkoott.rx_example.TAG
@@ -26,6 +28,7 @@ fun dataSourceObservable() : Observable<Int> {
     }
 }
 
+val bag = CompositeDisposable()
 
 fun test1() : Disposable{
     return Observable.just(1)

@@ -1,9 +1,9 @@
 package ru.amalkoott.kotlin_example
 
 import android.util.Log
-import ru.amalkoott.example.utils.Constant.KOTLIN_TASK
-import ru.amalkoott.example.utils.findInt
-import ru.amalkoott.example.utils.shaker
+import ru.amalkoott.core.utils.Constant.KOTLIN_TASK
+import ru.amalkoott.core.utils.findInt
+import ru.amalkoott.core.utils.shaker
 
 fun findInt(){
     val list : List<Any> = listOf(1f,Exception(),1.0,666,"one",777,'o', arrayListOf(0))
