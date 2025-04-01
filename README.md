@@ -1,11 +1,16 @@
-## Практика RxJava
+## Практика Android sdk
 
-Все походы на "сервер" (задания 1,3,5) - [Request.kt](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/utils/Request.kt) в пакете utils (модуль rx_example).
+Задание 1
+1) [NavNodeFragment](https://github.com/amalkoott/kotlin-em/blob/master/core/src/main/java/ru/amalkoott/core/navigation/NavNodeFragment.kt) - базовый фрагмент для узла навигации
+2) [Router](https://github.com/amalkoott/kotlin-em/blob/master/core/src/main/java/ru/amalkoott/core/navigation/Router.kt) - класс с логикой переходов (вперед/назад) на основе backStack
+3) [Navigator](https://github.com/amalkoott/kotlin-em/blob/master/core/src/main/java/ru/amalkoott/core/navigation/Navigator.kt) - интерфейс с поведением для всего, что способно к навигации по фрагментам
+2) [Пакет с фрагментами](https://github.com/amalkoott/kotlin-em/tree/master/android_example/src/main/java/ru/amalkoott/android_example/presentation) - просто фрагменты, которые переопределяют абстрактный метод базового класса
 
-Адаптер для ресайклера - [тут](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/SimpleStringsAdapter.kt)
+Задание 2
+1) [ChargeNotifyWorker](https://github.com/amalkoott/kotlin-em/blob/master/core/src/main/java/ru/amalkoott/core/worker/ChargeNotifyWorker.kt) - воркер, показывающий уведомление
+2) [WMUtils](https://github.com/amalkoott/kotlin-em/blob/master/core/src/main/java/ru/amalkoott/core/worker/WMUtils.kt) - файл с методами запуска работ
+3) [NotificationUtils](https://github.com/amalkoott/kotlin-em/blob/master/core/src/main/java/ru/amalkoott/core/utils/NotificationUtils.kt) - методы для работы с уведомлениями
 
-1) [Сетевой запрос](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/RecyclerFragment.kt) - объединен с третьим заданием
-2) [Таймер](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/TimerFragment.kt)
-3) [Ресайклер с выводом позиции элемента в toast (publish subject)](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/RecyclerFragment.kt)
-4) [вывод из EditText не ранее трех секунд](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/EditTextFragment.kt)
-5) [Zip списков кредитных кард с ошибкой и без](https://github.com/amalkoott/kotlin-em/blob/master/rx_example/src/main/java/ru/amalkoott/rx_example/presentation/CreditCardFragment.kt)
+Задание 3
+1) [EventFillView](https://github.com/amalkoott/kotlin-em/blob/master/core/src/main/java/ru/amalkoott/core/view/EventFillView.kt) - кастомная view
+2) [аттрибуты для кастомной view](https://github.com/amalkoott/kotlin-em/blob/master/core/src/main/res/values/event_fill_vew_attrs.xml) - вынесла, чтобы посмотреть, как все работает + логично иметь настройку шага заполнения 
