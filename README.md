@@ -1,5 +1,8 @@
 ## Практика Android sdk
 
+В :android_example находятся только фрагменты, необходимые для задания 1. Они наследуют NavNodeFragment - базовый фрагмент для узла навигации.
+Основной код по заданиям находится в [:core](https://github.com/amalkoott/kotlin-em/tree/master/core/src/main/java/ru/amalkoott/core)
+
 Задание 1
 1) [NavNodeFragment](https://github.com/amalkoott/kotlin-em/blob/master/core/src/main/java/ru/amalkoott/core/navigation/NavNodeFragment.kt) - базовый фрагмент для узла навигации
 2) [Router](https://github.com/amalkoott/kotlin-em/blob/master/core/src/main/java/ru/amalkoott/core/navigation/Router.kt) - класс с логикой переходов (вперед/назад) на основе backStack
